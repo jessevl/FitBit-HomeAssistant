@@ -3,6 +3,8 @@ A Home Assistant app for Fitbit OS (Ionic &amp; Versa)
 
 **Please not that this is a work in progress and needs a lot of work. Please feel welcome to contribute.**
 
+![Screenshot of Home Assistant on Fitbit](screenshot.png)
+
 # Current Status
 Currently the app retrieves all groups from the HA instance set in the settings on the companion (phone) app (URL & Password). It will retrieve all devices/states in those groups and show them grouped like in the above screenshot. It relies on your friendly names and groups being set up properly. Sensors that are not in any group are not displayed. Hue light Groups are always displayed.
 
