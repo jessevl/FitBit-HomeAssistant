@@ -1,0 +1,22 @@
+{
+  "fitbit": {
+    "appUUID": "f9c43a06-9bf9-4d72-a26a-5c6fa7d4440a",
+    "appType": "app",
+    "appDisplayName": "Home Assistant",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#607d8b",
+    "requestedPermissions": [
+      "access_internet",
+      "run_background"
+    ],
+    "buildTargets": [
+      "higgs",
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "Home Assistant"
+      }
+    }
+  }
+}

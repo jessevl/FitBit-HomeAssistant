@@ -1,0 +1,107 @@
+<svg>
+  <!-- Create a tile-list-item that can be re-used, with a simple
+    -- coloured background.
+    -- Things to note:
+    --  - display="none": Tile list items need to be hidden by default!
+    -->
+  
+  <symbol id="device-item" href="#tile-list-item" height="70" display="none">
+    <g id="transform">
+
+      <textarea id="title-text" fill="white" class="device-title"></textarea>
+      <rect class="state-divider"></rect>
+      <text id="state-text" class="device-state"></text>
+      <text id="state-unit"class="device-unit"></text>
+    </g>
+  </symbol>
+  <symbol id="group-item" href="#tile-list-item" height="70" display="none">
+    <!-- We put this in a transform so that way the elements inside
+      -- can be animated by the List container when shown / hidden. -->
+    <g id="transform">
+
+      <text id="title-text" fill="white" y="40" class="group-title"></text>
+    </g>
+  </symbol>
+  
+    <use id="container" href="#panoramaview">
+    <use id="item1" href="#panoramaview-item">
+      <use id="my-tile-list" href="#tile-list" y="30" height="100%-30">
+    
+        <!-- We need to mark this as a VirtualTileList -->
+        <var id="virtual" value="1" />
+
+        <!-- Each of our tiles have the 2px "tile-divider-bottom".
+          -- In order to properly calculate offsets when scrolling,
+          -- we need to tell the tile list how tall our separator is. -->
+
+
+        <!-- The item pools may each only contain a single type of
+          -- tile, and each pool should contain at least enough tiles
+          -- to fit on screen. For smoother scrolling, more are
+          -- recommended.
+          -- In this case, we can fit a maximum of 300/50 = 6 on screen
+          -- so we will keep 10 tiles in each pool. -->
+        <use id="group-pool" href="#tile-list-pool">
+          <use id="group-pool[1]" href="#group-item" />
+          <use id="group-pool[2]" href="#group-item" />
+          <use id="group-pool[3]" href="#group-item" />
+          <use id="group-pool[4]" href="#group-item" />
+          <use id="group-pool[5]" href="#group-item" />
+          <use id="group-pool[6]" href="#group-item" />
+          <use id="group-pool[7]" href="#group-item" />
+          <use id="group-pool[8]" href="#group-item" />
+          <use id="group-pool[9]" href="#group-item" />
+          <use id="group-pool[10]" href="#group-item" />
+        </use>
+
+        <use id="device-pool" href="#tile-list-pool">
+          <use id="device-pool[1]" href="#device-item" />
+          <use id="device-pool[2]" href="#device-item" />
+          <use id="device-pool[3]" href="#device-item" />
+          <use id="device-pool[4]" href="#device-item" />
+          <use id="device-pool[5]" href="#device-item" />
+          <use id="device-pool[6]" href="#device-item" />
+          <use id="device-pool[7]" href="#device-item" />
+          <use id="device-pool[8]" href="#device-item" />
+          <use id="device-pool[9]" href="#device-item" />
+          <use id="device-pool[10]" href="#device-item" />
+        </use>
+        </use>
+    </use>
+    <use id="item2" href="#panoramaview-item">
+      <rect width="100%" height="100%" fill="red" />
+    </use>
+    <use id="item3" href="#panoramaview-item">
+      <rect width="100%" height="100%" fill="blue" />
+    </use>
+    <use id="item4" href="#panoramaview-item">
+      <rect width="100%" height="100%" fill="gray" />
+    </use>
+
+    <!-- Have enough pagination dots for your slides (extras are hidden) -->
+    <use id="pagination-dots" href="#pagination-widget" y="8">
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-highlight-dot" />
+    </use>
+  </use>
+ 
+  <rect id="topBar">
+    <text id="status">Status text</text>
+    <text id="topBarText">Home Assistant</text>
+    
+    <gradientRect id="topBarGradient"
+    gradient-type="linear"
+    gradient-x1="0%" gradient-y1="0"
+    gradient-x2="100%-50" gradient-y2="0"
+    gradient-color1="#007dd1" gradient-color2="#3ac6ff" />
+  </rect>
+  
+  
+  <textarea id="popup" class="popup">status message to be displayed
+  here</textarea>
+
+</svg>

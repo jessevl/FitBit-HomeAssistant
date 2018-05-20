@@ -1,0 +1,116 @@
+text     {
+  font-family: System-Regular;
+}
+
+textarea {
+  font-size: 28;
+  font-family: System-Regular;
+  font-weight: regular;
+  text-length: 1024;
+}
+
+text.group-title {
+  font-size: 40;
+  font-weight: light;
+  text-length: 32;
+}
+
+text.group-description {
+  font-size: 22;
+  font-weight: light;
+  text-length: 32;
+}
+
+textarea.device-title {
+  font-size: 24;
+  font-weight: regular;
+  text-length: 32;
+  fill:fb-dark-gray;
+  width: 45%;
+  height:60;
+  x:0;
+  y:-15;
+  text-anchor: end;
+}
+
+text.device-state {
+  font-size: 40;
+  font-weight: bold;
+  text-length: 28;
+  fill: white;
+  x: 55%;
+  y:15;
+  height:40;
+  text-anchor: start;
+}
+
+text.device-unit {
+  font-size: 18;
+  font-weight: bold;
+  text-length: 28;
+  fill: white;
+  x: 55%;
+  y:40;
+  height:20;
+  text-anchor: start;
+}
+
+.state-divider {
+  width: 2;
+  height: 60;
+  y:-15;
+  x:50%;
+  fill: fb-blue;
+}
+
+.popup {
+  text-anchor: middle;
+  display-align: center;
+  x: 5%;
+  y: 5%;
+  width: 90%;
+  height: 90%;
+  text-length:512;
+  font-size: 32;
+  fill: white;
+}
+
+#status {
+  font-size: 20;
+  font-weight: light;
+  text-length: 32;
+  fill: white;
+  x: 100%;
+  y:18;
+  width: 50%;
+  height: 10;
+  text-anchor: end;
+}
+
+#topBar {
+  width: 100%;
+  height: 27;
+  fill: black;
+  x:0;
+  y:0;
+}
+
+#topBarGradient {
+  width: 100%;
+  height:3;
+  x:0;
+  y:24;
+}
+
+#topBarText {
+  width: 50%;
+  height: 10;
+  x: 0;
+  y:18;
+  font-size: 20;
+  font-weight: bold;
+  text-length: 32;
+  fill: white;
+  text-anchor: start;
+  letter-spacing: -1;
+}
