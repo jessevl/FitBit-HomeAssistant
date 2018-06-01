@@ -38,7 +38,8 @@ HassAPI.prototype.currentStates = function(){
                     return el.entity_id === sub_entity;
                   });
                   
-                  if (sub_entityObject){
+                  if (sub_entityObject
+                     && (sub_entityObject.attributes.hidden != true)){
                     let d = {
                     "name":sub_entityObject["attributes"]["friendly_name"],
                     "state":sub_entityObject["state"],
@@ -80,4 +81,4 @@ HassAPI.prototype.currentStates = function(){
       reject(error);
     });
   })
-}
+} 
