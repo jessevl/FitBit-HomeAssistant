@@ -54,7 +54,7 @@ HassUI.prototype.updateStateList = function(message) {
         return { type : (list[index].type == "group") ? "group-pool":"device-pool",
                  name: list[index].name,
                  state: list[index].state,
-                 unit: list[index].unit,
+                 unit: (list[index].unit == null) ? "":list[index].unit,
                  items: list[index].items,
                  index : index };
       },
